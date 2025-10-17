@@ -822,9 +822,9 @@ export default function Home() {
               {/* Enhanced List Items */}
               <ul className="space-y-5">
                 <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5 text-secondary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -847,9 +847,9 @@ export default function Home() {
                 </li>
 
                 <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-secondary to-secondary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5 text-secondary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -897,9 +897,9 @@ export default function Home() {
                 </li>
 
                 <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5 text-secondary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -922,9 +922,9 @@ export default function Home() {
                 </li>
 
                 <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-secondary to-secondary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
                     <svg
-                      className="w-5 h-5 text-white"
+                      className="w-5 h-5 text-secondary"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
