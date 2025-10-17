@@ -650,23 +650,44 @@ export default function Home() {
       </section>
 
       {/* FAQ Section - Accordions */}
-      <section id="faq" className="py-20" style={{ backgroundColor: 'var(--color-background)' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-secondary mb-4">Frequently Asked Questions</h2>
-          <p className="text-center text-secondary mb-12">
-            Find answers to common questions about The Dialogue
-          </p>
+      <section id="faq" className="py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--color-background)' }}>
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+              <span className="text-primary text-sm font-semibold tracking-wide uppercase">FAQ</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-secondary/80 max-w-2xl mx-auto">
+              Find answers to common questions about The Dialogue
+            </p>
+          </div>
           
           <div className="space-y-4">
             {/* FAQ 1 */}
-            <div className="bg-surface rounded-lg shadow-md overflow-hidden">
+            <div className="group bg-surface rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary/30 transition-all duration-300">
               <button
                 onClick={() => toggleFAQ(0)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors"
+                className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-start gap-4 hover:bg-accent/10 transition-colors"
               >
-                <span className="font-semibold text-lg text-secondary">Who can participate in GDi Dialogue?</span>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all ${openFAQ === 0 ? 'bg-primary' : 'bg-primary/10'}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFAQ === 0 ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-lg text-secondary pr-4">Who can participate in GDi Dialogue?</span>
+                </div>
                 <svg 
-                  className={`w-6 h-6 text-primary transition-transform ${openFAQ === 0 ? 'rotate-180' : ''}`} 
+                  className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${openFAQ === 0 ? 'rotate-180' : ''}`} 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -674,24 +695,31 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openFAQ === 0 && (
-                <div className="px-6 py-4 bg-accent">
-                  <p className="text-secondary">
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === 0 ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
+                  <p className="text-secondary/90 leading-relaxed pl-12">
                     GDi Dialogue is open to all young individuals, students, professionals, and anyone passionate about contributing to meaningful discussions and debates on India&apos;s future. We welcome participants from diverse backgrounds and perspectives.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* FAQ 2 */}
-            <div className="bg-surface rounded-lg shadow-md overflow-hidden">
+            <div className="group bg-surface rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary/30 transition-all duration-300">
               <button
                 onClick={() => toggleFAQ(1)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors"
+                className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-start gap-4 hover:bg-accent/10 transition-colors"
               >
-                <span className="font-semibold text-lg text-secondary">How do I register for events?</span>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all ${openFAQ === 1 ? 'bg-primary' : 'bg-primary/10'}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFAQ === 1 ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-lg text-secondary pr-4">How do I register for events?</span>
+                </div>
                 <svg 
-                  className={`w-6 h-6 text-primary transition-transform ${openFAQ === 1 ? 'rotate-180' : ''}`} 
+                  className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${openFAQ === 1 ? 'rotate-180' : ''}`} 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -699,24 +727,31 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openFAQ === 1 && (
-                <div className="px-6 py-4 bg-accent">
-                  <p className="text-secondary">
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === 1 ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
+                  <p className="text-secondary/90 leading-relaxed pl-12">
                     You can register by clicking the &quot;Register Now&quot; button on this page, which will direct you to our registration form. Fill in your details, and you&apos;ll receive confirmation along with updates about upcoming events and activities.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* FAQ 3 */}
-            <div className="bg-surface rounded-lg shadow-md overflow-hidden">
+            <div className="group bg-surface rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary/30 transition-all duration-300">
               <button
                 onClick={() => toggleFAQ(2)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors"
+                className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-start gap-4 hover:bg-accent/10 transition-colors"
               >
-                <span className="font-semibold text-lg text-secondary">What topics are covered in the debates?</span>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all ${openFAQ === 2 ? 'bg-primary' : 'bg-primary/10'}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFAQ === 2 ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-lg text-secondary pr-4">What topics are covered in the debates?</span>
+                </div>
                 <svg 
-                  className={`w-6 h-6 text-primary transition-transform ${openFAQ === 2 ? 'rotate-180' : ''}`} 
+                  className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${openFAQ === 2 ? 'rotate-180' : ''}`} 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -724,24 +759,31 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openFAQ === 2 && (
-                <div className="px-6 py-4 bg-accent">
-                  <p className="text-secondary">
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === 2 ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
+                  <p className="text-secondary/90 leading-relaxed pl-12">
                     Our debates cover a wide range of topics including policy, economics, technology, environment, social issues, and governance. We focus on current affairs and issues that are relevant to India&apos;s development and future trajectory.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* FAQ 4 */}
-            <div className="bg-surface rounded-lg shadow-md overflow-hidden">
+            <div className="group bg-surface rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary/30 transition-all duration-300">
               <button
                 onClick={() => toggleFAQ(3)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors"
+                className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-start gap-4 hover:bg-accent/10 transition-colors"
               >
-                <span className="font-semibold text-lg text-secondary">Is there any fee to participate?</span>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all ${openFAQ === 3 ? 'bg-primary' : 'bg-primary/10'}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFAQ === 3 ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-lg text-secondary pr-4">Is there any fee to participate?</span>
+                </div>
                 <svg 
-                  className={`w-6 h-6 text-primary transition-transform ${openFAQ === 3 ? 'rotate-180' : ''}`} 
+                  className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${openFAQ === 3 ? 'rotate-180' : ''}`} 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -749,24 +791,31 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openFAQ === 3 && (
-                <div className="px-6 py-4 bg-accent">
-                  <p className="text-secondary">
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === 3 ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
+                  <p className="text-secondary/90 leading-relaxed pl-12">
                     Most of our events and activities are free to participate in. However, some special workshops or events may have a nominal registration fee to cover operational costs. Details will be provided during event announcements.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* FAQ 5 */}
-            <div className="bg-surface rounded-lg shadow-md overflow-hidden">
+            <div className="group bg-surface rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-primary/30 transition-all duration-300">
               <button
                 onClick={() => toggleFAQ(4)}
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent transition-colors"
+                className="w-full px-6 md:px-8 py-5 text-left flex justify-between items-start gap-4 hover:bg-accent/10 transition-colors"
               >
-                <span className="font-semibold text-lg text-secondary">How can I stay updated about upcoming events?</span>
+                <div className="flex items-start gap-4 flex-1">
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all ${openFAQ === 4 ? 'bg-primary' : 'bg-primary/10'}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFAQ === 4 ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                  </div>
+                  <span className="font-semibold text-lg text-secondary pr-4">How can I stay updated about upcoming events?</span>
+                </div>
                 <svg 
-                  className={`w-6 h-6 text-primary transition-transform ${openFAQ === 4 ? 'rotate-180' : ''}`} 
+                  className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${openFAQ === 4 ? 'rotate-180' : ''}`} 
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -774,14 +823,31 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {openFAQ === 4 && (
-                <div className="px-6 py-4 bg-accent">
-                  <p className="text-secondary">
+              <div className={`overflow-hidden transition-all duration-300 ${openFAQ === 4 ? 'max-h-96' : 'max-h-0'}`}>
+                <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
+                  <p className="text-secondary/90 leading-relaxed pl-12">
                     Once you register, you&apos;ll be added to our mailing list and will receive regular updates about upcoming events, workshops, and opportunities. You can also follow us on our social media channels for the latest news and announcements.
                   </p>
                 </div>
-              )}
+              </div>
             </div>
+          </div>
+
+          {/* Still have questions CTA */}
+          <div className="mt-12 text-center p-8 bg-surface rounded-2xl shadow-lg border border-gray-100">
+            <h3 className="text-2xl font-bold text-secondary mb-3">Still have questions?</h3>
+            <p className="text-secondary/80 mb-6">We&apos;re here to help! Get in touch with our team.</p>
+            <a 
+              href="YOUR_GOOGLE_FORM_LINK" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Contact Us</span>
+            </a>
           </div>
         </div>
       </section>
