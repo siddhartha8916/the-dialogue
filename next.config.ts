@@ -1,11 +1,13 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export', // <-- this enables static export
 
-const nextConfig: NextConfig = {
   images: {
+    unoptimized: true, // required for static export if using next/image
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "picsum.photos",
+        protocol: 'https',
+        hostname: 'picsum.photos',
       },
     ],
   },
