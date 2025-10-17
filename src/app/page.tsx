@@ -345,52 +345,154 @@ export default function Home() {
       </section>
 
       {/* Features Section - Card Layout */}
-      <section id="features" className="py-20" style={{ backgroundColor: 'var(--color-background)' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-secondary mb-4">Why Join The Dialogue?</h2>
-          <p className="text-center text-secondary mb-12 max-w-2xl mx-auto">
-            Discover the benefits of being part of our vibrant community
-          </p>
+      <section id="features" className="py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--color-background)' }}>
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+              <span className="text-primary text-sm font-semibold tracking-wide uppercase">Benefits</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
+              Why Join The Dialogue?
+            </h2>
+            <p className="text-lg text-secondary/80 max-w-2xl mx-auto">
+              Discover the benefits of being part of our vibrant community and unlock your potential
+            </p>
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-surface rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            {/* Card 1 - Enhanced Design */}
+            <div className="group bg-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-2">
+              {/* Icon with Gradient Background */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                {/* Decorative Dot */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full border-4 border-surface"></div>
               </div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Connect with Leaders</h3>
-              <p className="text-secondary">
+
+              <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                Connect with Leaders
+              </h3>
+              <p className="text-secondary/80 leading-relaxed mb-6">
                 Engage with thought leaders, policymakers, and changemakers who are shaping India&apos;s future through meaningful dialogue.
               </p>
+              
+              {/* Feature List */}
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Network with experts</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Mentorship opportunities</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-surface rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+            {/* Card 2 - Enhanced Design */}
+            <div className="group bg-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-2">
+              {/* Icon with Gradient Background */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                {/* Decorative Dot */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full border-4 border-surface"></div>
               </div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Innovative Solutions</h3>
-              <p className="text-secondary">
+
+              <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                Innovative Solutions
+              </h3>
+              <p className="text-secondary/80 leading-relaxed mb-6">
                 Contribute to solving real-world problems through structured debates and collaborative brainstorming sessions.
               </p>
+              
+              {/* Feature List */}
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Real-world impact</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Policy influence</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Card 3 */}
-            <div className="bg-surface rounded-lg p-8 shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            {/* Card 3 - Enhanced Design */}
+            <div className="group bg-surface rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-2">
+              {/* Icon with Gradient Background */}
+              <div className="relative mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                {/* Decorative Dot */}
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-4 border-surface"></div>
               </div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Skill Development</h3>
-              <p className="text-secondary">
+
+              <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
+                Skill Development
+              </h3>
+              <p className="text-secondary/80 leading-relaxed mb-6">
                 Enhance your critical thinking, public speaking, and analytical skills through structured debate formats and workshops.
               </p>
+              
+              {/* Feature List */}
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Professional workshops</span>
+                </li>
+                <li className="flex items-center gap-2 text-sm text-secondary/70">
+                  <svg className="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span>Certificates awarded</span>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-12 text-center">
+            <p className="text-secondary/80 mb-6">Ready to make a difference?</p>
+            <a 
+              href="YOUR_GOOGLE_FORM_LINK" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            >
+              <span>Join Our Community</span>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
