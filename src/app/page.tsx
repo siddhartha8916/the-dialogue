@@ -263,24 +263,82 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-secondary mb-6">About GDi Dialogue</h2>
-              <p className="text-lg text-secondary mb-4">
-                At GDi, discussions and debates are central to how we solve problems. This ethos is now being extended to the youth ecosystem through <strong>GDi Dialogue: Charting India&apos;s Future - One Debate at a Time</strong>.
-              </p>
-              <p className="text-lg text-secondary mb-4">
-                We foster a culture of great ideas and dialogue as powerful tools for problem-solving, and this inspired the creation of GDi Dialogue, a platform dedicated to fostering meaningful conversations and generating innovative solutions.
-              </p>
-              <p className="text-lg text-secondary">
-                Join us in shaping the future through the power of thoughtful debate and collaborative problem-solving.
-              </p>
+              {/* Section Label */}
+              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                <span className="text-primary text-sm font-semibold tracking-wide uppercase">Who We Are</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
+                About GDi Dialogue
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="text-lg text-secondary leading-relaxed">
+                  At <strong className="text-primary">GDi</strong>, discussions and debates are central to how we solve problems. This ethos is now being extended to the youth ecosystem through{' '}
+                  <strong className="text-secondary">GDi Dialogue: Charting India&apos;s Future - One Debate at a Time</strong>.
+                </p>
+                
+                <p className="text-lg text-secondary leading-relaxed">
+                  We foster a culture of great ideas and dialogue as powerful tools for problem-solving. This inspired the creation of{' '}
+                  <strong className="text-primary">GDi Dialogue</strong>, a platform dedicated to fostering meaningful conversations and generating innovative solutions.
+                </p>
+                
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-lg text-secondary font-medium leading-relaxed">
+                    Join us in shaping the future through the power of thoughtful debate and collaborative problem-solving.
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Highlights */}
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="bg-accent/20 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                    </svg>
+                    <h4 className="font-semibold text-secondary">Youth-Focused</h4>
+                  </div>
+                  <p className="text-sm text-secondary/80">Empowering the next generation</p>
+                </div>
+
+                <div className="bg-accent/20 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+                    </svg>
+                    <h4 className="font-semibold text-secondary">Solution-Driven</h4>
+                  </div>
+                  <p className="text-sm text-secondary/80">Ideas that create impact</p>
+                </div>
+              </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
+
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
               <Image
-                src="https://picsum.photos/600/400"
+                src="https://picsum.photos/600/500"
                 alt="About GDi Dialogue"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              {/* Image Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent"></div>
+              
+              {/* Floating Badge on Image */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-bold text-secondary">Building Tomorrow</p>
+                    <p className="text-sm text-secondary/70">Through Dialogue & Debate</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
