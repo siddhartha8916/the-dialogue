@@ -497,58 +497,153 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Points Section - Bullet Points */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="https://picsum.photos/600/500"
-                alt="Key Highlights"
-                fill
-                className="object-cover"
-              />
+      {/* Key Points Section - What We Offer */}
+      <section className="py-20 bg-surface relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image Section */}
+            <div className="order-2 md:order-1">
+              <div className="relative h-96 md:h-[550px] rounded-2xl overflow-hidden shadow-2xl group">
+                <Image
+                  src="https://picsum.photos/600/550"
+                  alt="What We Offer"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
+                
+                {/* Floating Stats */}
+                <div className="absolute bottom-6 left-6 right-6 space-y-3">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-xs text-secondary/60">Active Members</p>
+                          <p className="font-bold text-secondary">500+</p>
+                        </div>
+                      </div>
+                      <div className="text-success font-semibold text-sm">+25%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h2 className="text-4xl font-bold text-secondary mb-8">What We Offer</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Regular debate competitions on current national and global issues</span>
+
+            {/* Content Section */}
+            <div className="order-1 md:order-2">
+              {/* Section Label */}
+              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-4">
+                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                <span className="text-primary text-sm font-semibold tracking-wide uppercase">Opportunities</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
+                What We Offer
+              </h2>
+              
+              <p className="text-lg text-secondary/80 mb-8">
+                Join a comprehensive program designed to enhance your skills, expand your network, and amplify your impact.
+              </p>
+
+              {/* Enhanced List Items */}
+              <ul className="space-y-5">
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Regular Debate Competitions</h4>
+                    <p className="text-secondary/70">Engage in debates on current national and global issues</p>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Mentorship from industry experts and thought leaders</span>
+
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-secondary to-secondary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Expert Mentorship</h4>
+                    <p className="text-secondary/70">Learn from industry experts and thought leaders</p>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Networking opportunities with like-minded individuals</span>
+
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Networking Opportunities</h4>
+                    <p className="text-secondary/70">Connect with like-minded individuals and leaders</p>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Recognition and certificates for active participation</span>
+
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-primary to-primary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Recognition & Certificates</h4>
+                    <p className="text-secondary/70">Get recognized for your active participation</p>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Access to exclusive workshops and training sessions</span>
+
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-secondary to-secondary-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Exclusive Workshops</h4>
+                    <p className="text-secondary/70">Access specialized training sessions and workshops</p>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-6 h-6 text-primary mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-lg text-secondary">Platform to voice your ideas and make an impact</span>
+
+                <li className="flex items-start group">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
+                    <svg className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-secondary mb-1">Voice Your Ideas</h4>
+                    <p className="text-secondary/70">Platform to share your ideas and make an impact</p>
+                  </div>
                 </li>
               </ul>
+
+              {/* CTA Button */}
+              <div className="mt-10">
+                <a 
+                  href="YOUR_GOOGLE_FORM_LINK" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                >
+                  <span>Start Your Journey</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
