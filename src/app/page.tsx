@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
@@ -13,23 +14,135 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Sticky Navbar */}
-      <nav className="sticky top-0 z-50 bg-surface shadow-md">
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-primary">The Dialogue</h1>
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <div className="flex items-center group">
+              <a href="#home" className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-primary/0 group-hover:text-secondary transition-colors">
+                    The Dialogue
+                  </h1>
+                  <p className="text-xs text-secondary/60 -mt-1">GDi Initiative</p>
+                </div>
+              </a>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-secondary hover:text-primary transition-colors">Home</a>
-              <a href="#about" className="text-secondary hover:text-primary transition-colors">About</a>
-              <a href="#features" className="text-secondary hover:text-primary transition-colors">Features</a>
-              <a href="#faq" className="text-secondary hover:text-primary transition-colors">FAQ</a>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1">
+              <a 
+                href="#home" 
+                className="relative px-4 py-2 text-secondary font-medium hover:text-primary transition-colors group"
+              >
+                Home
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              </a>
+              <a 
+                href="#about" 
+                className="relative px-4 py-2 text-secondary font-medium hover:text-primary transition-colors group"
+              >
+                About
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              </a>
+              <a 
+                href="#features" 
+                className="relative px-4 py-2 text-secondary font-medium hover:text-primary transition-colors group"
+              >
+                Features
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              </a>
+              <a 
+                href="#faq" 
+                className="relative px-4 py-2 text-secondary font-medium hover:text-primary transition-colors group"
+              >
+                FAQ
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              </a>
             </div>
+
+            {/* CTA Button */}
+            <div className="flex items-center gap-4">
+              <a 
+                href="YOUR_GOOGLE_FORM_LINK" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+              >
+                <span>Register Now</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+
+              {/* Mobile Menu Button */}
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                aria-label="Toggle menu"
+              >
+                <svg 
+                  className={`w-6 h-6 text-secondary transition-transform ${mobileMenuOpen ? 'rotate-90' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  {mobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="px-4 py-4 space-y-2 bg-white/95 backdrop-blur-lg border-t border-gray-200/50">
+            <a 
+              href="#home" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-secondary font-medium hover:bg-accent/30 hover:text-primary rounded-lg transition-colors"
+            >
+              Home
+            </a>
+            <a 
+              href="#about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-secondary font-medium hover:bg-accent/30 hover:text-primary rounded-lg transition-colors"
+            >
+              About
+            </a>
+            <a 
+              href="#features" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-secondary font-medium hover:bg-accent/30 hover:text-primary rounded-lg transition-colors"
+            >
+              Features
+            </a>
+            <a 
+              href="#faq" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-secondary font-medium hover:bg-accent/30 hover:text-primary rounded-lg transition-colors"
+            >
+              FAQ
+            </a>
             <a 
               href="YOUR_GOOGLE_FORM_LINK" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary-hover text-on-primary px-6 py-2 rounded-lg transition-colors font-medium"
+              className="block sm:hidden px-4 py-3 bg-primary hover:bg-primary-hover text-white text-center font-semibold rounded-lg transition-colors"
             >
               Register Now
             </a>
@@ -38,34 +151,109 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-[600px] flex items-center justify-center">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
           <Image
             src="https://picsum.photos/1920/1080"
             alt="Hero Background"
             fill
-            className="object-cover"
+            className="object-cover scale-110 transition-transform duration-1000"
             priority
           />
-          <div className="absolute inset-0 bg-secondary opacity-70"></div>
+          {/* Stronger Gradient Overlays for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/85 to-secondary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/20"></div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            GDi Dialogue: Charting India&apos;s Future
+
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-20">
+          {/* Badge/Label */}
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/40 rounded-full px-6 py-2 mb-8 animate-fade-in shadow-lg">
+            <span className="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+            <span className="text-white text-sm font-medium tracking-wide">Empowering Youth Through Dialogue</span>
+          </div>
+
+          {/* Main Heading - Solid White for Maximum Visibility */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-tight animate-slide-up drop-shadow-2xl">
+            <span className="block mb-2">GDi Dialogue</span>
+            <span className="block text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
+              Charting India&apos;s Future
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-white mb-8">
+
+          {/* Subheading - Bright Accent Color */}
+          <p className="text-2xl md:text-3xl text-white font-semibold mb-6 animate-slide-up delay-200 drop-shadow-lg">
             One Debate at a Time
           </p>
-          <p className="text-lg text-white mb-10 max-w-2xl mx-auto">
-            Join us in fostering meaningful conversations and generating innovative solutions for tomorrow&apos;s challenges.
+
+          {/* Description */}
+          <p className="text-lg md:text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-300 drop-shadow-md">
+            Join us in fostering meaningful conversations and generating innovative solutions for tomorrow&apos;s challenges. 
+            Be part of a movement that shapes policy, drives change, and builds the future.
           </p>
-          <a 
-            href="YOUR_GOOGLE_FORM_LINK" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-primary hover:bg-primary-hover text-on-primary px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
-          >
-            Join The Dialogue
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up delay-400">
+            <a 
+              href="YOUR_GOOGLE_FORM_LINK" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-full overflow-hidden shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-primary/50 min-w-[200px]"
+            >
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-hover to-primary-active"></span>
+              <span className="absolute inset-0 w-full h-full bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
+              <span className="relative flex items-center gap-2">
+                Join The Dialogue
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+            </a>
+
+            <a 
+              href="#about" 
+              className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full hover:bg-white/20 hover:border-white/50 transition-all duration-300 min-w-[200px]"
+            >
+              <span className="flex items-center gap-2">
+                Learn More
+                <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          {/* Stats/Trust Indicators */}
+          <div className="mt-16 pt-8 border-t border-white/30 grid grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in delay-500">
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">500+</div>
+              <div className="text-sm text-white">Participants</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">50+</div>
+              <div className="text-sm text-white">Debates Hosted</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">20+</div>
+              <div className="text-sm text-white">Expert Mentors</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <a href="#about" className="flex flex-col items-center gap-2 text-white hover:text-accent transition-colors">
+            <span className="text-xs font-medium tracking-wider drop-shadow-md">SCROLL</span>
+            <svg className="w-6 h-6 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </a>
         </div>
       </section>
