@@ -13,8 +13,6 @@ import {
   ChatIcon,
   LightbulbIcon,
   TrophyIcon,
-  GiftIcon,
-  SpeakerphoneIcon,
   UserGroupIcon,
   MoneyIcon,
   BellIcon,
