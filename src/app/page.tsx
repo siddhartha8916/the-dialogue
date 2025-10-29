@@ -235,7 +235,7 @@ export default function Home() {
           </div>
 
           {/* Stats/Trust Indicators */}
-          <div className="mt-16 pt-8 border-t border-white/30 grid grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in delay-500">
+          {/* <div className="mt-16 pt-8 border-t border-white/30 grid grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in delay-500">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2 drop-shadow-lg">
                 500+
@@ -254,7 +254,7 @@ export default function Home() {
               </div>
               <div className="text-sm text-white">Expert Mentors</div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Scroll Indicator */}
@@ -521,9 +521,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image Section */}
             <div className="order-2 md:order-1">
-              <div className="relative h-96 md:h-[550px] rounded-2xl overflow-hidden shadow-2xl group">
+              <div className="relative h-102 md:h-[600px] rounded-2xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="https://picsum.photos/600/550"
+                  src="/what-we-offer.jpeg"
                   alt="What We Offer"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -532,7 +532,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
 
                 {/* Floating Stats */}
-                <div className="absolute bottom-6 left-6 right-6 space-y-3">
+                {/* <div className="absolute bottom-6 left-6 right-6 space-y-3">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
@@ -551,7 +551,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
