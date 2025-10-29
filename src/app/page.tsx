@@ -2,6 +2,27 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {
+  ArrowRightIcon,
+  ArrowDownIcon,
+  MenuIcon,
+  LightningIcon,
+  CheckIcon,
+  UsersIcon,
+  QuestionIcon,
+  ChatIcon,
+  LightbulbIcon,
+  TrophyIcon,
+  GiftIcon,
+  SpeakerphoneIcon,
+  UserGroupIcon,
+  MoneyIcon,
+  BellIcon,
+  MailIcon,
+  DocumentIcon,
+  ChatBubbleIcon,
+  ChevronRightIcon,
+} from "@/components/icons";
 
 export default function Home() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -65,20 +86,7 @@ export default function Home() {
                 className="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
               >
                 <span>Register Now</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
+                <ArrowRightIcon className="w-4 h-4" />
               </a>
 
               {/* Mobile Menu Button */}
@@ -87,31 +95,12 @@ export default function Home() {
                 className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 aria-label="Toggle menu"
               >
-                <svg
+                <MenuIcon
                   className={`w-6 h-6 text-secondary transition-transform ${
                     mobileMenuOpen ? "rotate-90" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {mobileMenuOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  )}
-                </svg>
+                  isOpen={mobileMenuOpen}
+                />
               </button>
             </div>
           </div>
@@ -232,20 +221,7 @@ export default function Home() {
               <span className="absolute inset-0 w-full h-full bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></span>
               <span className="relative flex items-center gap-2">
                 Join The Dialogue
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </a>
 
@@ -255,20 +231,7 @@ export default function Home() {
             >
               <span className="flex items-center gap-2">
                 Learn More
-                <svg
-                  className="w-5 h-5 group-hover:translate-y-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                <ArrowDownIcon className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
               </span>
             </a>
           </div>
@@ -305,20 +268,7 @@ export default function Home() {
             <span className="text-xs font-medium tracking-wider drop-shadow-md">
               SCROLL
             </span>
-            <svg
-              className="w-6 h-6 drop-shadow-md"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
+            <ArrowDownIcon className="w-6 h-6 drop-shadow-md" />
           </a>
         </div>
       </section>
@@ -363,14 +313,7 @@ export default function Home() {
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-accent/20 rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <svg
-                      className="w-5 h-5 text-primary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                    </svg>
+                    <UsersIcon className="w-5 h-5 text-primary" />
                     <h4 className="font-semibold text-secondary">
                       Youth-Focused
                     </h4>
@@ -382,18 +325,7 @@ export default function Home() {
 
                 <div className="bg-accent/20 rounded-lg p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <svg
-                      className="w-5 h-5 text-primary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <QuestionIcon className="w-5 h-5 text-primary" />
                     <h4 className="font-semibold text-secondary">
                       Solution-Driven
                     </h4>
@@ -419,20 +351,7 @@ export default function Home() {
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                      />
-                    </svg>
+                    <ChatIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="font-bold text-secondary">
@@ -484,20 +403,7 @@ export default function Home() {
               {/* Icon with Gradient Background */}
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    className="w-8 h-8 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+                  <LightningIcon className="w-8 h-8 text-secondary" />
                 </div>
                 {/* Decorative Dot */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-4 border-surface"></div>
@@ -514,33 +420,11 @@ export default function Home() {
               {/* Feature List */}
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Network with experts</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Mentorship opportunities</span>
                 </li>
               </ul>
@@ -551,20 +435,7 @@ export default function Home() {
               {/* Icon with Gradient Background */}
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    className="w-8 h-8 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+                  <LightbulbIcon className="w-8 h-8 text-secondary" />
                 </div>
                 {/* Decorative Dot */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-4 border-surface"></div>
@@ -581,33 +452,11 @@ export default function Home() {
               {/* Feature List */}
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Real-world impact</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Policy influence</span>
                 </li>
               </ul>
@@ -618,20 +467,7 @@ export default function Home() {
               {/* Icon with Gradient Background */}
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent-hover rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
-                  <svg
-                    className="w-8 h-8 text-secondary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+                  <TrophyIcon className="w-8 h-8 text-secondary" />
                 </div>
                 {/* Decorative Dot */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary rounded-full border-4 border-surface"></div>
@@ -648,33 +484,11 @@ export default function Home() {
               {/* Feature List */}
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Professional workshops</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-secondary/70">
-                  <svg
-                    className="w-4 h-4 text-primary flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <CheckIcon className="w-4 h-4 text-primary flex-shrink-0" />
                   <span>Certificates awarded</span>
                 </li>
               </ul>
@@ -693,20 +507,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               <span>Join Our Community</span>
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
+              <ArrowRightIcon className="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -738,20 +539,7 @@ export default function Home() {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                            />
-                          </svg>
+                          <UserGroupIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
                           <p className="text-xs text-secondary/60">
@@ -792,18 +580,7 @@ export default function Home() {
               <ul className="space-y-5">
                 <li className="flex items-start group">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <CheckIcon className="w-5 h-5 text-secondary" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
@@ -819,18 +596,7 @@ export default function Home() {
 
                 <li className="flex items-start group">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <CheckIcon className="w-5 h-5 text-secondary" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
@@ -845,18 +611,7 @@ export default function Home() {
 
                 <li className="flex items-start group">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <CheckIcon className="w-5 h-5 text-secondary" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
@@ -880,20 +635,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Start Your Journey</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
+                  <ArrowRightIcon className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -942,43 +684,21 @@ export default function Home() {
                       openFAQ === 0 ? "bg-primary" : "bg-primary/10"
                     }`}
                   >
-                    <svg
+                    <QuestionIcon
                       className={`w-4 h-4 transition-colors ${
                         openFAQ === 0 ? "text-white" : "text-primary"
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    />
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
                     Who can participate?
                   </span>
                 </div>
-                <svg
+                <ArrowDownIcon
                   className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${
                     openFAQ === 0 ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
@@ -1007,43 +727,21 @@ export default function Home() {
                       openFAQ === 1 ? "bg-primary" : "bg-primary/10"
                     }`}
                   >
-                    <svg
+                    <DocumentIcon
                       className={`w-4 h-4 transition-colors ${
                         openFAQ === 1 ? "text-white" : "text-primary"
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
+                    />
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
                     How do I register?
                   </span>
                 </div>
-                <svg
+                <ArrowDownIcon
                   className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${
                     openFAQ === 1 ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
@@ -1073,43 +771,21 @@ export default function Home() {
                       openFAQ === 2 ? "bg-primary" : "bg-primary/10"
                     }`}
                   >
-                    <svg
+                    <ChatBubbleIcon
                       className={`w-4 h-4 transition-colors ${
                         openFAQ === 2 ? "text-white" : "text-primary"
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                      />
-                    </svg>
+                    />
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
                     What topics are covered in the debates?
                   </span>
                 </div>
-                <svg
+                <ArrowDownIcon
                   className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${
                     openFAQ === 2 ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
@@ -1138,43 +814,21 @@ export default function Home() {
                       openFAQ === 3 ? "bg-primary" : "bg-primary/10"
                     }`}
                   >
-                    <svg
+                    <MoneyIcon
                       className={`w-4 h-4 transition-colors ${
                         openFAQ === 3 ? "text-white" : "text-primary"
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    />
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
                     Is there any fee to participate?
                   </span>
                 </div>
-                <svg
+                <ArrowDownIcon
                   className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${
                     openFAQ === 3 ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
@@ -1201,43 +855,21 @@ export default function Home() {
                       openFAQ === 4 ? "bg-primary" : "bg-primary/10"
                     }`}
                   >
-                    <svg
+                    <BellIcon
                       className={`w-4 h-4 transition-colors ${
                         openFAQ === 4 ? "text-white" : "text-primary"
                       }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                      />
-                    </svg>
+                    />
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
                     How can I stay updated?
                   </span>
                 </div>
-                <svg
+                <ArrowDownIcon
                   className={`w-6 h-6 text-primary transition-transform flex-shrink-0 ${
                     openFAQ === 4 ? "rotate-180" : ""
                   }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
@@ -1269,20 +901,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
+              <MailIcon className="w-5 h-5" />
               <span>Contact Us</span>
             </a>
           </div>
@@ -1324,20 +943,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Join Now</span>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
+                  <ArrowRightIcon className="w-4 h-4" />
                 </a>
               </div>
 
@@ -1353,20 +959,7 @@ export default function Home() {
                       href="#home"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Home</span>
                     </a>
                   </li>
@@ -1375,20 +968,7 @@ export default function Home() {
                       href="#about"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>About</span>
                     </a>
                   </li>
@@ -1397,20 +977,7 @@ export default function Home() {
                       href="#features"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Features</span>
                     </a>
                   </li>
@@ -1419,20 +986,7 @@ export default function Home() {
                       href="#faq"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>FAQ</span>
                     </a>
                   </li>
@@ -1451,20 +1005,7 @@ export default function Home() {
                       href="#"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Events</span>
                     </a>
                   </li>
@@ -1473,20 +1014,7 @@ export default function Home() {
                       href="#"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Blog</span>
                     </a>
                   </li>
@@ -1495,20 +1023,7 @@ export default function Home() {
                       href="#"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Gallery</span>
                     </a>
                   </li>
@@ -1517,20 +1032,7 @@ export default function Home() {
                       href="#"
                       className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
-                      <svg
-                        className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
+                      <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Contact</span>
                     </a>
                   </li>
@@ -1619,20 +1121,7 @@ export default function Home() {
                       className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors text-sm"
                     />
                     <button className="px-4 py-2 bg-primary hover:bg-primary-hover rounded-lg transition-colors">
-                      <svg
-                        className="w-5 h-5 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 7l5 5m0 0l-5 5m5-5H6"
-                        />
-                      </svg>
+                      <ArrowRightIcon className="w-5 h-5 text-white" />
                     </button>
                   </div>
                 </div>
