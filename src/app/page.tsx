@@ -20,30 +20,7 @@ export default function Home() {
             {/* Logo */}
             <div className="flex items-center group">
               <a href="#home" className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                  <svg
-                    className="w-6 h-6 text-bg-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-primary/0 group-hover:text-secondary transition-colors">
-                    The Dialogue
-                  </h1>
-                  <p className="text-xs text-secondary/60 -mt-1">
-                    GDi Initiative
-                  </p>
-                </div>
+                <Image src="/logo.png" alt="" width={200} height={20} />
               </a>
             </div>
 
@@ -82,7 +59,7 @@ export default function Home() {
             {/* CTA Button */}
             <div className="flex items-center gap-4">
               <a
-                href="YOUR_GOOGLE_FORM_LINK"
+                href="https://forms.gle/EphoixejK5HsDsxk8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
@@ -176,7 +153,7 @@ export default function Home() {
               FAQ
             </a>
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
               className="block sm:hidden px-4 py-3 bg-primary hover:bg-primary-hover text-white text-center font-semibold rounded-lg transition-colors"
@@ -239,13 +216,14 @@ export default function Home() {
           <p className="text-lg md:text-xl text-white mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up delay-300 drop-shadow-md">
             Join us in fostering meaningful conversations and generating
             innovative solutions for tomorrow&apos;s challenges. Be part of a
-            movement that shapes policy, drives change, and builds the future.
+            mega discussion that shapes policy, drives change, and builds the
+            future.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up delay-400">
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-full overflow-hidden shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-primary/50 min-w-[200px]"
@@ -365,29 +343,20 @@ export default function Home() {
               <div className="space-y-4">
                 <p className="text-lg text-secondary leading-relaxed">
                   At <strong className="text-primary">GDi</strong>, discussions
-                  and debates are central to how we solve problems. This ethos
-                  is now being extended to the youth ecosystem through{" "}
+                  and debate are central to how we solve problems. This ethos is
+                  now being extended to the youth ecosystem through{" "}
                   <strong className="text-secondary">
-                    GDi Dialogue: Charting India&apos;s Future - One Debate at a
+                    GDi Dialogue: Charting India&apos;s Future – One Debate at a
                     Time
                   </strong>
                   .
                 </p>
 
                 <p className="text-lg text-secondary leading-relaxed">
-                  We foster a culture of great ideas and dialogue as powerful
-                  tools for problem-solving. This inspired the creation of{" "}
-                  <strong className="text-primary">GDi Dialogue</strong>, a
-                  platform dedicated to fostering meaningful conversations and
-                  generating innovative solutions.
+                  We foster a culture of ideas and dialogue as powerful tools
+                  for problem-solving. Join us in shaping the future through the
+                  power of thoughtful debate and collaborative problem-solving.
                 </p>
-
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-lg text-secondary font-medium leading-relaxed">
-                    Join us in shaping the future through the power of
-                    thoughtful debate and collaborative problem-solving.
-                  </p>
-                </div>
               </div>
 
               {/* Key Highlights */}
@@ -538,7 +507,7 @@ export default function Home() {
                 Connect with Leaders
               </h3>
               <p className="text-secondary/80 leading-relaxed mb-6">
-                Engage with thought leaders, policymakers, and changemakers who
+                Engage with thought-leaders, policymakers, and changemakers who
                 are shaping India&apos;s future through meaningful dialogue.
               </p>
 
@@ -606,7 +575,7 @@ export default function Home() {
               </h3>
               <p className="text-secondary/80 leading-relaxed mb-6">
                 Contribute to solving real-world problems through structured
-                debates and collaborative brainstorming sessions.
+                debates and collaborative brainstorming.
               </p>
 
               {/* Feature List */}
@@ -669,11 +638,11 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">
-                Skill Development
+                Compete with the Best
               </h3>
               <p className="text-secondary/80 leading-relaxed mb-6">
-                Enhance your critical thinking, public speaking, and analytical
-                skills through structured debate formats and workshops.
+                Go head-to-head with top talent from leading institutions across
+                India.
               </p>
 
               {/* Feature List */}
@@ -718,7 +687,7 @@ export default function Home() {
               Ready to make a difference?
             </p>
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -838,10 +807,12 @@ export default function Home() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
-                      Regular Debate Competitions
+                      Exciting Rewards
                     </h4>
                     <p className="text-secondary/70">
-                      Engage in debates on current national and global issues
+                      Cash prizes worth ₹4 lakh, along with direct entry to the
+                      final interview round of GDi&apos;s recruitment process
+                      for the winning team
                     </p>
                   </div>
                 </li>
@@ -863,10 +834,11 @@ export default function Home() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
-                      Expert Mentorship
+                      Platform for Change
                     </h4>
                     <p className="text-secondary/70">
-                      Learn from industry experts and thought leaders
+                      A chance to voice your ideas on governance and development
+                      issues that could inspire the next big transformation
                     </p>
                   </div>
                 </li>
@@ -888,85 +860,12 @@ export default function Home() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary mb-1">
-                      Networking Opportunities
+                      Connect with Leaders
                     </h4>
                     <p className="text-secondary/70">
-                      Connect with like-minded individuals and leaders
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-secondary mb-1">
-                      Recognition & Certificates
-                    </h4>
-                    <p className="text-secondary/70">
-                      Get recognized for your active participation
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-secondary mb-1">
-                      Exclusive Workshops
-                    </h4>
-                    <p className="text-secondary/70">
-                      Access specialized training sessions and workshops
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start group">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-accent to-accent-hover rounded-xl flex items-center justify-center mr-4 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all">
-                    <svg
-                      className="w-5 h-5 text-secondary"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-semibold text-secondary mb-1">
-                      Voice Your Ideas
-                    </h4>
-                    <p className="text-secondary/70">
-                      Platform to share your ideas and make an impact
+                      Be part of an event featuring social sector experts,
+                      bureaucrats, and philanthropies driving India&apos;s
+                      growth story
                     </p>
                   </div>
                 </li>
@@ -975,7 +874,7 @@ export default function Home() {
               {/* CTA Button */}
               <div className="mt-10">
                 <a
-                  href="YOUR_GOOGLE_FORM_LINK"
+                  href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -1061,7 +960,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
-                    Who can participate in GDi Dialogue?
+                    Who can participate?
                   </span>
                 </div>
                 <svg
@@ -1088,11 +987,9 @@ export default function Home() {
               >
                 <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
                   <p className="text-secondary/90 leading-relaxed pl-12">
-                    GDi Dialogue is open to all young individuals, students,
-                    professionals, and anyone passionate about contributing to
-                    meaningful discussions and debates on India&apos;s future.
-                    We welcome participants from diverse backgrounds and
-                    perspectives.
+                    Open to all undergraduate and postgraduate students,
+                    passionate about meaningful discussions around India&apos;s
+                    policy challenges and future.
                   </p>
                 </div>
               </div>
@@ -1128,7 +1025,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
-                    How do I register for events?
+                    How do I register?
                   </span>
                 </div>
                 <svg
@@ -1155,11 +1052,10 @@ export default function Home() {
               >
                 <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
                   <p className="text-secondary/90 leading-relaxed pl-12">
-                    You can register by clicking the &quot;Register Now&quot;
-                    button on this page, which will direct you to our
-                    registration form. Fill in your details, and you&apos;ll
-                    receive confirmation along with updates about upcoming
-                    events and activities.
+                    Click the &quot;Register Now&quot; button, fill out the
+                    form, submit a 2-pager concept note to the provided problem
+                    statement and you&apos;ll receive confirmation and updates
+                    about upcoming phases.
                   </p>
                 </div>
               </div>
@@ -1222,10 +1118,9 @@ export default function Home() {
               >
                 <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
                   <p className="text-secondary/90 leading-relaxed pl-12">
-                    Our debates cover a wide range of topics including policy,
-                    economics, technology, environment, social issues, and
-                    governance. We focus on current affairs and issues that are
-                    relevant to India&apos;s development and future trajectory.
+                    Debates span policy, economics, technology, environment,
+                    social issues and governance-focusing especially on
+                    challenges relevant to India&apos;s development trajectory.
                   </p>
                 </div>
               </div>
@@ -1288,10 +1183,7 @@ export default function Home() {
               >
                 <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
                   <p className="text-secondary/90 leading-relaxed pl-12">
-                    Most of our events and activities are free to participate
-                    in. However, some special workshops or events may have a
-                    nominal registration fee to cover operational costs. Details
-                    will be provided during event announcements.
+                    The event entails no registration fee
                   </p>
                 </div>
               </div>
@@ -1327,7 +1219,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <span className="font-semibold text-lg text-secondary pr-4">
-                    How can I stay updated about upcoming events?
+                    How can I stay updated?
                   </span>
                 </div>
                 <svg
@@ -1354,10 +1246,9 @@ export default function Home() {
               >
                 <div className="px-6 md:px-8 py-5 bg-accent/20 border-t border-accent/30">
                   <p className="text-secondary/90 leading-relaxed pl-12">
-                    Once you register, you&apos;ll be added to our mailing list
-                    and will receive regular updates about upcoming events,
-                    workshops, and opportunities. You can also follow us on our
-                    social media channels for the latest news and announcements.
+                    Once registered, you&apos;ll be added to our mailing list.
+                    You can also follow us on social media for the latest news
+                    and announcement.
                   </p>
                 </div>
               </div>
@@ -1373,7 +1264,7 @@ export default function Home() {
               We&apos;re here to help! Get in touch with our team.
             </p>
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
@@ -1399,7 +1290,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-[#2d3a2b] via-[#3a4738] to-[#404E3B] text-white relative overflow-hidden">
+      <footer className="bg-gradient-to-br from-[#204b75] via-[#94404e] to-[#204b75] text-white relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -1411,26 +1302,9 @@ export default function Home() {
               {/* Brand Section */}
               <div className="md:col-span-5">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">The Dialogue</h3>
-                    <p className="text-xs text-gray-300">by GDi</p>
-                  </div>
+                  <a href="#home" className="flex items-center gap-3">
+                    <Image src="/logo.png" alt="" width={200} height={20} />
+                  </a>
                 </div>
 
                 <p className="text-gray-300 mb-4 leading-relaxed">
@@ -1444,7 +1318,7 @@ export default function Home() {
 
                 {/* CTA Button */}
                 <a
-                  href="YOUR_GOOGLE_FORM_LINK"
+                  href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
