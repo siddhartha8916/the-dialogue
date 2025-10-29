@@ -13,7 +13,6 @@ import {
   ChatIcon,
   LightbulbIcon,
   TrophyIcon,
-  UserGroupIcon,
   MoneyIcon,
   BellIcon,
   MailIcon,
@@ -28,6 +27,28 @@ export default function Home() {
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // Enhanced GA4 Event Tracking for Registration Clicks
+  // Tracks which button/location users click to register
+  // Event name: 'registration_click'
+  // Locations tracked:
+  // - navbar: Desktop navigation "Register Now"
+  // - mobile_menu: Mobile menu "Register Now"
+  // - hero_section: Hero "Join The Dialogue"
+  // - features_section: Features "Join Our Community"
+  // - what_we_offer_section: What We Offer "Start Your Journey"
+  // - faq_contact_button: FAQ "Contact Us"
+  // - footer: Footer "Join Now"
+  const trackRegistrationClick = (location: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'registration_click', {
+        event_category: 'engagement',
+        event_label: location,
+        button_location: location,
+        page_path: window.location.pathname,
+      });
+    }
   };
 
   return (
@@ -143,6 +164,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackRegistrationClick('mobile_menu')}
               className="block sm:hidden px-4 py-3 bg-primary hover:bg-primary-hover text-white text-center font-semibold rounded-lg transition-colors"
             >
               Register Now
@@ -213,6 +235,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackRegistrationClick('hero_section')}
               className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-full overflow-hidden shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-primary/50 min-w-[200px]"
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-hover to-primary-active"></span>
@@ -502,6 +525,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackRegistrationClick('features_section')}
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               <span>Join Our Community</span>
@@ -630,6 +654,7 @@ export default function Home() {
                   href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackRegistrationClick('what_we_offer_section')}
                   className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Start Your Journey</span>
@@ -897,6 +922,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackRegistrationClick('faq_contact_button')}
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
             >
               <MailIcon className="w-5 h-5" />
@@ -938,6 +964,7 @@ export default function Home() {
                   href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackRegistrationClick('footer')}
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Join Now</span>
