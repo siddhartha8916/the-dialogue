@@ -1119,9 +1119,9 @@ export default function Home() {
                     <input
                       type="email"
                       placeholder="Your email"
-                      className="flex-1 px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-sm"
+                      className="flex-1 min-w-0 px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-sm"
                     />
-                    <button className="px-4 py-2 bg-primary hover:bg-primary-hover rounded-lg transition-colors shadow-md hover:shadow-lg">
+                    <button className="flex-shrink-0 px-4 py-2 bg-primary hover:bg-primary-hover rounded-lg transition-colors shadow-md hover:shadow-lg">
                       <ArrowRightIcon className="w-5 h-5 text-white" />
                     </button>
                   </div>
