@@ -41,9 +41,9 @@ export default function Home() {
   // - faq_contact_button: FAQ "Contact Us"
   // - footer: Footer "Join Now"
   const trackRegistrationClick = (location: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'registration_click', {
-        event_category: 'engagement',
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "registration_click", {
+        event_category: "engagement",
         event_label: location,
         button_location: location,
         page_path: window.location.pathname,
@@ -164,7 +164,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackRegistrationClick('mobile_menu')}
+              onClick={() => trackRegistrationClick("mobile_menu")}
               className="block sm:hidden px-4 py-3 bg-primary hover:bg-primary-hover text-white text-center font-semibold rounded-lg transition-colors"
             >
               Register Now
@@ -235,7 +235,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackRegistrationClick('hero_section')}
+              onClick={() => trackRegistrationClick("hero_section")}
               className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-primary rounded-full overflow-hidden shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-primary/50 min-w-[200px]"
             >
               <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-primary-hover to-primary-active"></span>
@@ -525,7 +525,7 @@ export default function Home() {
               href="https://forms.gle/EphoixejK5HsDsxk8"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackRegistrationClick('features_section')}
+              onClick={() => trackRegistrationClick("features_section")}
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
               <span>Join Our Community</span>
@@ -654,7 +654,9 @@ export default function Home() {
                   href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackRegistrationClick('what_we_offer_section')}
+                  onClick={() =>
+                    trackRegistrationClick("what_we_offer_section")
+                  }
                   className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Start Your Journey</span>
@@ -920,7 +922,7 @@ export default function Home() {
             </p>
             <a
               href="mailto:dialogue@gdipartners.in"
-              onClick={() => trackRegistrationClick('faq_contact_button')}
+              onClick={() => trackRegistrationClick("faq_contact_button")}
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
             >
               <MailIcon className="w-5 h-5" />
@@ -931,10 +933,10 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-[#204b75] via-[#94404e] to-[#204b75] text-white relative overflow-hidden">
+      <footer className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100 text-gray-900 relative overflow-hidden border-t border-gray-300/50">
         {/* Decorative Background Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gray-300/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gray-300/20 rounded-full blur-3xl"></div>
 
         <div className="relative z-10">
           {/* Main Footer Content */}
@@ -948,11 +950,11 @@ export default function Home() {
                   </a>
                 </div>
 
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-900 mb-4 leading-relaxed font-medium">
                   GDi Dialogue: Charting India&apos;s Future - One Debate at a
                   Time
                 </p>
-                <p className="text-gray-400 text-sm mb-6">
+                <p className="text-gray-700 text-sm mb-6">
                   Empowering youth through meaningful conversations and
                   innovative problem-solving.
                 </p>
@@ -962,7 +964,7 @@ export default function Home() {
                   href="https://forms.gle/EphoixejK5HsDsxk8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackRegistrationClick('footer')}
+                  onClick={() => trackRegistrationClick("footer")}
                   className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   <span>Join Now</span>
@@ -972,7 +974,7 @@ export default function Home() {
 
               {/* Quick Links */}
               <div className="md:col-span-2">
-                <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <h4 className="text-lg font-bold mb-4 flex items-center gap-2 text-gray-900">
                   <div className="w-1 h-6 bg-primary rounded-full"></div>
                   Quick Links
                 </h4>
@@ -980,7 +982,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#home"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Home</span>
@@ -989,7 +991,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#about"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>About</span>
@@ -998,7 +1000,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#features"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Features</span>
@@ -1007,7 +1009,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#faq"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>FAQ</span>
@@ -1018,7 +1020,7 @@ export default function Home() {
 
               {/* Resources */}
               <div className="md:col-span-2">
-                <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <h4 className="text-lg font-bold mb-4 flex items-center gap-2 text-gray-900">
                   <div className="w-1 h-6 bg-primary rounded-full"></div>
                   Resources
                 </h4>
@@ -1026,7 +1028,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Events</span>
@@ -1035,7 +1037,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Blog</span>
@@ -1044,7 +1046,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Gallery</span>
@@ -1053,7 +1055,7 @@ export default function Home() {
                   <li>
                     <a
                       href="#"
-                      className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 group"
+                      className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span>Contact</span>
@@ -1064,11 +1066,11 @@ export default function Home() {
 
               {/* Connect Section */}
               <div className="md:col-span-3">
-                <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <h4 className="text-lg font-bold mb-4 flex items-center gap-2 text-gray-900">
                   <div className="w-1 h-6 bg-primary rounded-full"></div>
                   Connect With Us
                 </h4>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-700 text-sm mb-4">
                   Follow us on social media for updates and announcements
                 </p>
 
@@ -1078,11 +1080,11 @@ export default function Home() {
                     href="https://www.linkedin.com/company/gdipartners/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+                    className="w-10 h-10 bg-white hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-gray-300 shadow-sm"
                     aria-label="LinkedIn"
                   >
                     <svg
-                      className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors"
+                      className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1094,11 +1096,11 @@ export default function Home() {
                     href="https://www.instagram.com/gdipartners?igsh=MWM2endnODNxNjNqbQ=="
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+                    className="w-10 h-10 bg-white hover:bg-primary rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group border border-gray-300 shadow-sm"
                     aria-label="Instagram"
                   >
                     <svg
-                      className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors"
+                      className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1109,17 +1111,17 @@ export default function Home() {
                 </div>
 
                 {/* Newsletter */}
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                  <p className="text-sm text-gray-300 mb-3">
+                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-gray-300 shadow-sm">
+                  <p className="text-sm text-gray-900 mb-3 font-medium">
                     Subscribe to our newsletter
                   </p>
                   <div className="flex gap-2">
                     <input
                       type="email"
                       placeholder="Your email"
-                      className="flex-1 px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-colors text-sm"
+                      className="flex-1 px-4 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-primary transition-colors text-sm"
                     />
-                    <button className="px-4 py-2 bg-primary hover:bg-primary-hover rounded-lg transition-colors">
+                    <button className="px-4 py-2 bg-primary hover:bg-primary-hover rounded-lg transition-colors shadow-md hover:shadow-lg">
                       <ArrowRightIcon className="w-5 h-5 text-white" />
                     </button>
                   </div>
@@ -1129,10 +1131,10 @@ export default function Home() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/10">
+          <div className="border-t border-gray-300/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-gray-400 text-sm text-center md:text-left">
+                <p className="text-gray-700 text-sm text-center md:text-left">
                   &copy; {new Date().getFullYear()} GDi Dialogue. All rights
                   reserved.
                 </p>
@@ -1140,19 +1142,19 @@ export default function Home() {
                 <div className="flex gap-6 text-sm">
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
                   >
                     Privacy Policy
                   </a>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
                   >
                     Terms of Service
                   </a>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-primary transition-colors"
+                    className="text-gray-700 hover:text-primary transition-colors"
                   >
                     Cookie Policy
                   </a>
