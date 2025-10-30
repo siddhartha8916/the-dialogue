@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "The Dialogue",
   description: "A modern hub for The Dialogue — learn more and register to participate.",
+  icons: {
+    icon: "/gdi-favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -27,12 +30,12 @@ export default function RootLayout({
       >
         {/* Google Analytics */}
         <Script
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-EQRVGKSZ00"
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

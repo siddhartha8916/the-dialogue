@@ -181,7 +181,7 @@ export default function Home() {
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://picsum.photos/1920/1080"
+            src="/DSC01726.webp"
             alt="Hero Background"
             fill
             className="object-cover scale-110 transition-transform duration-1000"
@@ -360,7 +360,7 @@ export default function Home() {
 
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
               <Image
-                src="https://picsum.photos/600/500"
+                src="/DSC00844.webp"
                 alt="About GDi Dialogue"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
