@@ -181,7 +181,7 @@ export default function Home() {
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/DSC01726.webp"
+            src="/DSC01738.webp"
             alt="Hero Background"
             fill
             className="object-cover scale-110 transition-transform duration-1000"
