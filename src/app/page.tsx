@@ -528,7 +528,7 @@ export default function Home() {
               onClick={() => trackRegistrationClick("features_section")}
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
             >
-              <span>Join Our Community</span>
+              <span>Join The Dialogue</span>
               <ArrowRightIcon className="w-5 h-5" />
             </a>
           </div>
