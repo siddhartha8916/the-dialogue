@@ -151,7 +151,7 @@ export default function Home() {
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-secondary font-medium hover:bg-accent/30 hover:text-primary rounded-lg transition-colors"
             >
-              Features
+              Why Participate
             </a>
             <a
               href="#faq"
