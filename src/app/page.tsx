@@ -1003,7 +1003,7 @@ export default function Home() {
                       className="text-gray-700 hover:text-primary transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <span>Features</span>
+                      <span>Why Participate</span>
                     </a>
                   </li>
                   <li>
