@@ -84,7 +84,7 @@ export default function Home() {
                 href="#features"
                 className="relative px-4 py-2 text-secondary font-medium hover:text-primary transition-colors group"
               >
-                Features
+                Why Participate
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </a>
               <a
